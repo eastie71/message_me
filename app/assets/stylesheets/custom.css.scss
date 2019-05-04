@@ -1,4 +1,7 @@
 @import "semantic-ui";
+body {
+	background-color: beige;
+}
 
 .navbar-adjust {
 	margin-bottom: 1rem !important;	
@@ -6,6 +9,11 @@
 
 .home-icon-adjust {
 	background-color: #ADD8E6;
+}
+
+.button-color {
+	color: #303030 !important;
+	background-color: #ADD8E6 !important;
 }
 
 .chatbox {
