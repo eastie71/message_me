@@ -3,6 +3,6 @@ class ChatroomController < ApplicationController
 
 	def index
 		@message = Message.new
-		@messages = Message.all.order(updated_at: :desc)
+		@messages = Message.all.order(updated_at: :desc).first(20)
 	end
 end
