@@ -1,6 +1,8 @@
 <div class="ui message">
 	<div class="header">
-		<%= message.user.username %>
+		<% if !message.user.nil? %>
+			<%= message.user.username %>
+		<% end %>
 	</div>
 	<p><%= message.content %></p>
 </div>
