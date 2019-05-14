@@ -39,4 +39,9 @@ class UserTest < ActiveSupport::TestCase
 		@user2.username = @user.username
 		assert @user.valid?
 	end
+
+	test "username cannot be too large" do
+		@user.username = "A" * 51
+		assert_not @user.valid?
+	end
 end

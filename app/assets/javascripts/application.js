@@ -20,4 +20,10 @@
 
 $(document).on('turbolinks:load', function() {
 	$('.ui.dropdown').dropdown();
+
+	// Close the flash messages
+	$('.message .close').on('click', function() {
+    	$(this).closest('.message').transition('fade');
+	});
 });
+
