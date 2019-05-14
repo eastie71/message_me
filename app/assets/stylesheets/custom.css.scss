@@ -17,5 +17,10 @@ body {
 }
 
 .chatbox {
-	height: 700px;
+	height: 675px;
+}
+
+#messages {
+	height: 15em;
+	overflow: auto;
 }
