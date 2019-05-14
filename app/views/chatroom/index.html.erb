@@ -27,45 +27,17 @@
 			<div class="content">
 				<div class="ui feed">
 					<%= render @messages %>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
-				      </div>
-				    </div>
-				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-				      </div>
-				    </div>
-				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
-				      </div>
-				    </div>
-				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <a>Christian Rocha</a> signed up for the  site.
-				      </div>
-				    </div>
-				  </div>
 				</div>
 			</div>
 			<div class="extra content">
-				<form class="ui reply form">
+				<%= form_for(@message, url: message_path, html: {class: "ui reply form", role: "form"}) do |f| %>
 					<div class="field">
 						<div class="ui fluid icon input">
-							<input type="text" placeholder="Enter your message...">
-							<i class="bordered inverted icon edit"></i>
+							<%= f.text_field :content, placeholder: "Enter your message...", autofocus: true %>
+							<%= f.button '<i class="bordered inverted icon edit"></i>'.html_safe %>
 						</div>
 					</div>
-				</form>
+				<% end %>
 			</div>
 		</div>
 	</div>
