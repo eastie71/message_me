@@ -10,4 +10,5 @@ App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
 
     # Append the rendered message content to the div with "message-append" id
     $('#message-append').prepend data.message_content
+    $('#message_content').val('')
     scroll_top()
