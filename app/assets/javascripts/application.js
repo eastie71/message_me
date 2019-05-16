@@ -34,15 +34,17 @@ message_listeners = function() {
 		}
 	});
 
-	// After hitting enter key - clear the field
-	message_field.addEventListener('keyup', 
-		(e) => {
-			e.preventDefault();
-			if (e.keyCode === 13) {
-				e.target.value = '';
+	if (message_field != null) {
+		// After hitting enter key - clear the field
+		message_field.addEventListener('keyup', 
+			(e) => {
+				e.preventDefault();
+				if (e.keyCode === 13) {
+					e.target.value = '';
+				}
 			}
-		}
-	);
+		);
+	}
 }
 
 $(document).on('turbolinks:load', function() {

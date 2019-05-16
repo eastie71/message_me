@@ -1,16 +1,13 @@
 <div class="ui orange three inverted attached menu navbar-adjust">
   <div class="ui container ">
     <%= link_to "Chatroom", root_path, class: "item" %>
-    <a class="item">
-      Messages
-    </a>
     <div class="right menu">
       <div class="ui dropdown item">
         Account <i class="dropdown icon"></i>
         <div class="menu">
           <% if !logged_in? %>
             <%= link_to "Login", login_path, class: "item" %>
-            <a class="item">Sign Up</a>
+            <%= link_to "Sign Up", signup_path, class: "item" %>
           <% else %>
             <%= link_to "Logout", logout_path, method: :delete, class: "item" %>
           <% end %>

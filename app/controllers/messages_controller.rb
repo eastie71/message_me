@@ -6,7 +6,6 @@ class MessagesController < ApplicationController
 		@message.user = current_user
 		if @message.save
 			ActionCable.server.broadcast "chatroom_channel", message_content: message_render(@message)
-		else
 		end
 	end
 
