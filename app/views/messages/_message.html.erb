@@ -1,7 +1,7 @@
 <div class="ui message">
 	<div class="header">
 		<% if !message.user.nil? %>
-			<%= message.user.username %>
+			<%= message.user.username %><small class="created">&nbsp&nbsp<%= time_ago_in_words(message.created_at) %>&nbsp ago</small>
 		<% end %>
 	</div>
 	<p><%= message.content %></p>
